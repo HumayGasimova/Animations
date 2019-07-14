@@ -29,10 +29,10 @@ module.exports = {
         test: /\.(png|gif|jpg|jpeg|svg|ico)$/,
         use:  'file-loader?name=[name].[ext]'
       },
-      {
-        test: /\.(jpe?g|png|ttf|eot|svg|woff(2)?)(\?[a-z0-9=&.]+)?$/,
-        use: 'base64-inline-loader'
-      },
+      // {
+      //   test: /\.(jpe?g|png|ttf|eot|svg|woff(2)?)(\?[a-z0-9=&.]+)?$/,
+      //   use: 'base64-inline-loader'
+      // },
       {
         test: /\.css$/,
         use: ['style-loader', 'css-loader']
@@ -50,12 +50,23 @@ module.exports = {
             loader: "sass-loader" // compiles Sass to CSS
           }
         ]
-      }
+      },
+      // {
+      //   test: /\.(png|jpg|gif)$/i,
+      //   use: [
+      //     {
+      //       loader: 'url-loader',
+      //       options: {
+      //         limit: 8192,
+      //       },
+      //     },
+      //   ],
+      // }
     ]
   },
   output: {
     filename: 'transformed.js',
-    path: __dirname + '/build'
+    path: path.resolve(__dirname,'build')
   },
   devServer: {
     contentBase: './build',

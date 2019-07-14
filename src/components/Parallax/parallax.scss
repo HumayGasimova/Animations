@@ -1,0 +1,43 @@
+.main {
+    height: 2000px;
+    .backgroundBox {
+        position: relative;
+        height: 600px;
+        background-image: url('../../images/BackgroundImageCut.png');
+        // background-size: auto 600px;
+        background-size: 100%;
+        background-repeat: no-repeat;
+        clip: rect(500px, 100px, 100px, 0);
+        background-position: top center;
+        background-attachment: fixed;
+        // background-size: contain;
+        // background-position: top center;
+    }
+}
+
+.feather {
+    background-image: url('../../images/dove_png_transparent_background_413304.jpg');
+    width: 600px;
+    height: 500px;
+    background-color: transparentize(pink, 0.3);
+    background-repeat: no-repeat;
+    position: absolute;
+    overflow: hidden;
+    left: 50%;
+    top: 380px;
+    
+}
+
+.logo{
+    height: 300px;
+    width: 100%;
+    position: absolute;
+    top: 20%;
+   
+}
+
+svg {
+    font-size: 5em;
+    font-weight: bold;
+    text-transform: uppercase;
+}
