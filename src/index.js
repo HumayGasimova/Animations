@@ -17,6 +17,7 @@ import App from './components/app';
 import Parallax from './components/Parallax/Parallax';
 import Text from './components/Parallax/Text/text';
 
+
 const store = configureStore()
 ReactDOM.render(
     // <Provider store={store}>

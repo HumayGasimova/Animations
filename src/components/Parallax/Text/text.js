@@ -34,7 +34,7 @@ import React,{
        return(
                 <svg height="100%" width="100%"
                     >
-                    <text x="50%" y="50%" fill="rgb(136, 0, 101)" text-anchor="middle">Crypto347!</text>
+                    <text x="50%" y="50%" fill="rgb(136, 0, 101)" textAnchor="middle">Crypto347!</text>
                 </svg>
        );
     }

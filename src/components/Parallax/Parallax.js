@@ -9,7 +9,7 @@ import React,{
  /**
   * Components
   */
-
+import Stars from './Stars/stars';
  
  /**
   * Styles
@@ -31,12 +31,13 @@ import Text from './Text/text'
      constructor(props) {
        super(props);
    }
+
  
     render(){
        return(
             <div className="main">
                <div className="backgroundBox">
-                  <div className="starsLeft"/>
+                  <Stars/> 
                   <div className="logo">
                      <Text/>
                   </div>
