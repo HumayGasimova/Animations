@@ -1,8 +1,8 @@
 .main {
-    height: 2000px;
+    height: 7000px;
     .backgroundBox {
         position: relative;
-        height: 600px;
+        height: 800px;
         background-image: url('../../images/BackgroundImageCut.png');
         // background-size: auto 600px;
         background-size: 100%;
@@ -38,7 +38,7 @@
             position: absolute;
             // overflow: hidden;
             right: 10px;
-            top: 87px;
+            bottom: 0px;
             transform: rotate(180deg);
             
         }
@@ -47,7 +47,7 @@
             height: 300px;
             width: 100%;
             position: absolute;
-            top: 20%;
+            top: 35%;
 
         }
 
@@ -57,7 +57,7 @@
 
 .backgroundBox2 {
     position: relative;
-    height: 600px;
+    height: 1000px;
     background-image: url('../../images/abstract-magic-light-on-sweet-pink-background-vector-3421483.jpg');
     // background-size: auto 600px;
     background-size: 100%;
@@ -79,7 +79,6 @@
     flex-direction: column;
     align-items: center;
     display: absolute;
-
 }
 svg {
     font-size: 5em;

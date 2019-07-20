@@ -1,6 +1,6 @@
 .leftUnicorn {
     transform: scaleX(-1);
-    top: 100px;
+    top: -200px;
     left: 50px;
     z-index: -1;
     position: absolute;
@@ -11,7 +11,7 @@
 }
 
 .rightUnicorn {
-    top: 200px;
+    top: -150px;
     right: 10px;
     position: absolute;
     z-index: -1;

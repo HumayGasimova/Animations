@@ -28,28 +28,44 @@ import './unicorn.scss';
      constructor(props) {
        super(props);
        this.state={
-           slower: 0
+           slower: 0,
+           faster: 0
        }
    }
-//    componentDidMount = () => {
-//     window.addEventListener('scroll', this.handleScroll)
-//  }
+   componentDidMount = () => {
+    window.addEventListener('scroll', this.handleScroll)
+ }
 
-//     handleScroll = () => {
-//         let scrollHeight = document.body.scrollTop
-//          this.setState({
-//              slower: scrollHeight/2
-//          })
-//     }
+    handleScroll = () => {
+        let scrollHeight = document.body.scrollTop
+         this.setState({
+             slower: scrollHeight/2,
+             slower2x: scrollHeight/8
+         })
+    }
+    renderImage = () => {
+        if(this.props.left){
+           return(
+                <img 
+                    src={UnicornLogo}
+                    style={{transform: `translate(0px, ${this.state.slower}%)`}}
+                />
+           )}else{
+            return(
+                <img 
+                src={UnicornLogo}
+                style={{transform: `translate(0px, ${this.state.slower}px)`}}
+            />
+           ) }
+        
+    }
+    
  
 
     render(){
        return(
             <div className={this.props.left ? "leftUnicorn": "rightUnicorn"}>
-                <img 
-                    src={UnicornLogo}
-                    // style={{transform: `translate(0px, ${this.state.slower}px)`}}
-                    />
+                {this.renderImage()}
             </div>
        );
     }
