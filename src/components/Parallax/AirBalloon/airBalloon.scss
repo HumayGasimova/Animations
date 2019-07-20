@@ -4,9 +4,10 @@
     left: 190px;
 
     position: absolute;
-    img {
+    & img {
         width: 90px;
         height: 110px;
+        opacity: 0.4;
     }
 }
 
@@ -15,9 +16,10 @@
     right: 250px;
     position: absolute;
 
-    img {
+    & img {
         width: 150px;
         height: 200px;
+        opacity: 0.9;
     }
     
 }

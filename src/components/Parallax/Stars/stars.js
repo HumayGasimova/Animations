@@ -44,7 +44,7 @@ import './stars.scss';
  
     render(){
        return(
-            <div className="starsLeft">
+            <div className={this.props.left ? "starsLeft" : "starsRight"}>
                <img 
                     src={StarsLogo}
                     // style={{transform: `translate(0px, ${this.state.slower}px)`}}

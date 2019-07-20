@@ -39,11 +39,11 @@ import Text from './Text/text'
        return(
             <div className="main">
                <div className="backgroundBox">
-                  <Stars/> 
+                  <Stars left/> 
                   <div className="logo">
                      <Text/>
                   </div>
-                  <div className="starsRight"/>
+                  <Stars/> 
                   <AirBalloon left/>
                   <AirBalloon />
                </div>

@@ -27,21 +27,21 @@
         //     top: 10px;
         // }
 
-        .starsRight {
-            width: 600px;
-            height: 500px;
-            background-image: url('../../images/bright-star-clipart-11.png');
-            // background-color: transparentize(pink, 0.3);
-            background-repeat: no-repeat;
-            background-size: 70%;
-            // background-position: center;
-            position: absolute;
-            // overflow: hidden;
-            right: 10px;
-            bottom: 0px;
-            transform: rotate(180deg);
+        // .starsRight {
+        //     width: 600px;
+        //     height: 500px;
+        //     background-image: url('../../images/bright-star-clipart-11.png');
+        //     // background-color: transparentize(pink, 0.3);
+        //     background-repeat: no-repeat;
+        //     background-size: 70%;
+        //     // background-position: center;
+        //     position: absolute;
+        //     // overflow: hidden;
+        //     right: 10px;
+        //     bottom: 0px;
+        //     transform: rotate(180deg);
             
-        }
+        // }
         
         .logo{
             height: 300px;
@@ -91,16 +91,16 @@ svg {
         font-weight: bold;
         text-transform: uppercase;
     }
-    .starsRight {
-        width: 600px;
-        height: 500px;
-        background-image: url('../../images/bright-star-clipart-11.png');
-        background-repeat: no-repeat;
-        background-size: 70%;
-        position: absolute;
-        right: 10px;
-        top: 87px;
-        transform: rotate(180deg);
-    }
+    // .starsRight {
+    //     width: 600px;
+    //     height: 500px;
+    //     background-image: url('../../images/bright-star-clipart-11.png');
+    //     background-repeat: no-repeat;
+    //     background-size: 70%;
+    //     position: absolute;
+    //     right: 10px;
+    //     top: 87px;
+    //     transform: rotate(180deg);
+    // }
     
 }
