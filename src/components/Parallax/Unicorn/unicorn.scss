@@ -1,0 +1,23 @@
+.leftUnicorn {
+    transform: scaleX(-1);
+    top: 100px;
+    left: 50px;
+    z-index: -1;
+    position: absolute;
+    img {
+        width: 150px;
+        height: 150px;
+    }
+}
+
+.rightUnicorn {
+    top: 200px;
+    right: 10px;
+    position: absolute;
+    z-index: -1;
+    img {
+        width: 300px;
+        height: 300px;
+    }
+    
+}

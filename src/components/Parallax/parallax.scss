@@ -68,12 +68,17 @@
     // background-size: contain;
     // background-position: top center;
     overflow: hidden;
+    z-index: -1;
+  
 }
+
 .text {
+    padding: 20px;
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
+    display: absolute;
 
 }
 svg {
@@ -98,4 +103,5 @@ svg {
         top: 87px;
         transform: rotate(180deg);
     }
+    
 }
