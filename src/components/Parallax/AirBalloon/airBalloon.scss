@@ -1,0 +1,23 @@
+.leftAirBallon {
+    transform: scaleX(-1);
+    bottom: 10px;
+    left: 190px;
+
+    position: absolute;
+    img {
+        width: 90px;
+        height: 110px;
+    }
+}
+
+.rightAirBallon {
+    bottom: 170px;
+    right: 250px;
+    position: absolute;
+
+    img {
+        width: 150px;
+        height: 200px;
+    }
+    
+}
