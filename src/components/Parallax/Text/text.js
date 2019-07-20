@@ -28,14 +28,28 @@ import React,{
  
      constructor(props) {
        super(props);
+       this.state={
+         slower: 0
+     }
+   }
+   componentDidMount = () => {
+      window.addEventListener('scroll', this.handleScroll)
+   }
+  
+   handleScroll = () => {
+         let scrollHeight = document.body.scrollTop
+         this.setState({
+            slower: scrollHeight/2
+         })
    }
  
     render(){
-       return(
-                <svg height="100%" width="100%"
-                    >
-                    <text x="50%" y="50%" fill="rgb(136, 0, 101)" textAnchor="middle">Crypto347!</text>
-                </svg>
+       return(<div  style={{transform: `translate(0px, ${this.state.slower}px)`}}>
+                  <svg height="100%" width="100%"
+                     >
+                     <text x="50%" y="50%" fill="rgb(136, 0, 101)" textAnchor="middle">Crypto347!</text>
+                  </svg>
+               </div>
        );
     }
  }

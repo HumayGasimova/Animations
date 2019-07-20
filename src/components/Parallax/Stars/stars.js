@@ -31,23 +31,23 @@ import './stars.scss';
            slower: 0
        }
    }
-   componentDidMount = () => {
-    window.addEventListener('scroll', this.handleScroll)
- }
+//    componentDidMount = () => {
+//     window.addEventListener('scroll', this.handleScroll)
+//  }
 
-    handleScroll = () => {
-        let scrollHeight = document.body.scrollTop
-         this.setState({
-             slower: scrollHeight/2
-         })
-    }
+//     handleScroll = () => {
+//         let scrollHeight = document.body.scrollTop
+//          this.setState({
+//              slower: scrollHeight/2
+//          })
+//     }
  
     render(){
        return(
             <div className="starsLeft">
                <img 
                     src={StarsLogo}
-                    style={{transform: `translate(0px, ${this.state.slower}px)`}}
+                    // style={{transform: `translate(0px, ${this.state.slower}px)`}}
                     />
             </div>
        );
