@@ -50,22 +50,22 @@ import './imagesPage.scss';
     handleScroll = () => {
         let scrollHeight = document.body.scrollTop
         let el = document.getElementById("imagePage")
-        if(scrollHeight > el.offsetTop){
+        console.log(window.innerHeight, window.outerHeight)
+        if(scrollHeight > el.offsetTop - window.innerHeight/2){
            this.setState({
               showImagePage: true
            })
         }else{
-            this.setState({
-               showImagePage: false
-            })
+            // this.setState({
+            //    showImagePage: false
+            // })
         }
     }
 
     
     renderImages = () => {
-         if(this.state.showImagePage){
             return(
-               <div className="slots">
+               <div className={this.state.showImagePage ? "slots" : "hidden"}>
                   {this.state.imageSlots.map((el,i)=>{
                      return (
                            <ImageSlot
@@ -74,7 +74,7 @@ import './imagesPage.scss';
                               // clicked={this.state.clicked}
                               // number={"number" + i}
                               image={el}
-                              timer={(i+1) * 150 }
+                              timer={(i+1) * 500 }
                            >
                               {"Humay"}
                            </ImageSlot>
@@ -82,13 +82,15 @@ import './imagesPage.scss';
                   })}    
                </div>
             )
-         }
       }
  
 
     render(){
        return(
-            <div id="imagePage">
+            <div 
+               id="imagePage"
+               // className={this.state.showImagePage ? "show" : "hidden"}
+               >
                 {this.renderImages()}
             </div>
        );
