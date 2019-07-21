@@ -1,6 +1,7 @@
 body {
     margin-left: 40px;
     margin-right: 40px;
+    background-color: transparentize(rgb(240, 221, 234), 0.3);
 }
 
 .main {
@@ -78,16 +79,6 @@ body {
     flex-direction: column;
     align-items: center;
     display: absolute;
-}
-
-.slots {
-    display: flex;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-    padding-left: 100px;
-    padding-right: 100px;
-    padding-top: 50px;
-
 }
 
 svg {
