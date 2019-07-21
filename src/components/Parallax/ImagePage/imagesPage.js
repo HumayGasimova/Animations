@@ -38,7 +38,8 @@ import './imagesPage.scss';
      constructor(props) {
         super(props);
         this.state = {
-           imageSlots: [Pic1,Pic2,Pic3,Pic4,Pic5,Pic6,Pic7,Pic8,Pic9],
+           imageSlots: [[Pic1,Pic2,Pic3],[Pic4,Pic5,Pic6],[Pic7,Pic8,Pic9]],
+            // imageSlots: [Pic1,Pic2,Pic3,Pic4,Pic5,Pic6,Pic7,Pic8,Pic9],
            showImagePage: false
         }
     }
@@ -50,39 +51,70 @@ import './imagesPage.scss';
     handleScroll = () => {
         let scrollHeight = document.body.scrollTop
         let el = document.getElementById("imagePage")
-        console.log(window.innerHeight, window.outerHeight)
+   
         if(scrollHeight > el.offsetTop - window.innerHeight/2){
            this.setState({
               showImagePage: true
            })
         }else{
-            // this.setState({
-            //    showImagePage: false
-            // })
+            this.setState({
+               showImagePage: false
+            })
         }
     }
 
     
     renderImages = () => {
-            return(
-               <div className={this.state.showImagePage ? "slots" : "hidden"}>
-                  {this.state.imageSlots.map((el,i)=>{
-                     return (
-                           <ImageSlot
-                              key={i}
-                              // onClick={() => {this.handleOnClick(i)}}
-                              // clicked={this.state.clicked}
-                              // number={"number" + i}
-                              image={el}
-                              timer={(i+1) * 500 }
-                           >
-                              {"Humay"}
-                           </ImageSlot>
-                     )
-                  })}    
-               </div>
-            )
-      }
+       if(this.state.showImagePage){
+         return(
+            <div >
+               {this.state.imageSlots.map((el,i)=>{
+                  return(
+                     <div className="triple">
+                        {el.map((el2,i2) => {
+                           return (
+                              <ImageSlot
+                                 key={i2}
+                                 // onClick={() => {this.handleOnClick(i)}}
+                                 // clicked={this.state.clicked}
+                                 // number={"number" + i}
+                                 image={el2}
+                                 timer={(i2+1) * 150 }
+                              >
+                                 {"Humay"}
+                              </ImageSlot>
+                           )
+                        })}
+                     </div>
+                  )
+               })}    
+            </div>
+         )
+       }
+   }
+
+//    renderImages = () => {
+//       if(this.state.showImagePage){
+//         return(
+//            <div className="slots">
+//               {this.state.imageSlots.map((el,i)=>{
+//                   return (
+//                      <ImageSlot
+//                         key={i}
+//                         // onClick={() => {this.handleOnClick(i)}}
+//                         // clicked={this.state.clicked}
+//                         // number={"number" + i}
+//                         image={el}
+//                         timer={(i+1) * 150 }
+//                      >
+//                         {"Humay"}
+//                      </ImageSlot>
+//                   )
+//               })}    
+//            </div>
+//         )
+//       }
+//   }
  
 
     render(){

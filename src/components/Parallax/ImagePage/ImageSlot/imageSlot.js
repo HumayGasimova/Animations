@@ -32,7 +32,7 @@ class ImageSlot extends Component {
     componentWillMount = () => {
         setTimeout(()=>{
             this.setState({
-                hidden: ""
+                hidden: false
             })
         },this.props.timer)
     }
@@ -44,7 +44,10 @@ class ImageSlot extends Component {
 
     render(){
         return(
-            <div className={this.state.hidden ? "hidden" : "slot"} >
+            <div 
+                // className="slot"
+                className={this.state.hidden ? "hidden" : "slot"}
+            >
                 <img src={this.props.image}/>
             </div>
         );
