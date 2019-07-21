@@ -74,7 +74,7 @@ import './imagesPage.scss';
                               // clicked={this.state.clicked}
                               // number={"number" + i}
                               image={el}
-                              timer={i * 1000}
+                              timer={(i+1) * 150 }
                            >
                               {"Humay"}
                            </ImageSlot>

@@ -1,13 +1,18 @@
 .slot {
-    border: 2px solid rgb(228, 159, 211);
     width: 300px;
     height: 300px;
     margin: 20px;
+    
+   
     & img {
         width: 300px;
         height: 300px;
+        opacity: 1;
+        transform: translateX(20px);
+        transition: all 0.3s ease-in-out;
     }
 }
 .hidden {
-    display:none;
+    opacity: 0;
+    transform: translateX(0px);
 }
