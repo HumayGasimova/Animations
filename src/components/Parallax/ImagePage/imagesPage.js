@@ -121,6 +121,7 @@ import './imagesPage.scss';
        return(
             <div 
                id="imagePage"
+               style={{padding: '40px'}}
                // className={this.state.showImagePage ? "show" : "hidden"}
                >
                 {this.renderImages()}
