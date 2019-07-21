@@ -1,3 +1,8 @@
+body {
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
 .main {
     height: 7000px;
     .backgroundBox {
@@ -74,11 +79,23 @@
     align-items: center;
     display: absolute;
 }
+
+.slots {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-top: 50px;
+
+}
+
 svg {
     font-size: 5em;
     font-weight: bold;
     text-transform: uppercase;
 }
+
 @media (max-width: 1142px){
     svg {
         font-size: 3em;
