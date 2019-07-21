@@ -42,38 +42,22 @@ import './imagesPage.scss';
         }
     }
   
-//    componentDidMount = () => {
-//     window.addEventListener('scroll', this.handleScroll)
-//  }
+   componentDidMount = () => {
+    window.addEventListener('scroll', this.handleScroll)
+ }
 
-//     handleScroll = () => {
-//         let scrollHeight = document.body.scrollTop
-//          this.setState({
-//              slower: scrollHeight/2,
-//              slower2x: scrollHeight/10
-//          })
-//     }
+    handleScroll = () => {
+        let scrollHeight = document.body.scrollTop
+        let el = document.getElementById("imagePage")
+        if(scrollHeight > el.offsetTop){
+           console.log("Hey")
+        }
+    }
 
-   //  renderImage = () => {
-   //      if(this.props.left){
-   //         return(
-   //              <img 
-   //                  src={AirBalloonLogo}
-   //                  style={{transform: `translate(0px, -${this.state.slower}px)`}}
-   //              />
-   //         )}else{
-   //          return(
-   //              <img 
-   //              src={AirBalloonLogo}
-   //              style={{transform: `translate(0px, -${this.state.slower2x}px)`}}
-   //          />
-   //         ) }
-        
-   //  }
     
     renderImages = () => {
         return(
-           <div className="slots">
+           <div id="imagePage"className="slots">
               {this.state.imageSlots.map((el,i)=>{
                  return (
                        <ImageSlot
