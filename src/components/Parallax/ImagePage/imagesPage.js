@@ -38,7 +38,8 @@ import './imagesPage.scss';
      constructor(props) {
         super(props);
         this.state = {
-           imageSlots: [Pic1,Pic2,Pic3,Pic4,Pic5,Pic6,Pic7,Pic8,Pic9]
+           imageSlots: [Pic1,Pic2,Pic3,Pic4,Pic5,Pic6,Pic7,Pic8,Pic9],
+           showImagePage: false
         }
     }
   
@@ -50,35 +51,44 @@ import './imagesPage.scss';
         let scrollHeight = document.body.scrollTop
         let el = document.getElementById("imagePage")
         if(scrollHeight > el.offsetTop){
-           console.log("Hey")
+           this.setState({
+              showImagePage: true
+           })
+        }else{
+            this.setState({
+               showImagePage: false
+            })
         }
     }
 
     
     renderImages = () => {
-        return(
-           <div id="imagePage"className="slots">
-              {this.state.imageSlots.map((el,i)=>{
-                 return (
-                       <ImageSlot
-                          key={i}
-                          // onClick={() => {this.handleOnClick(i)}}
-                          // clicked={this.state.clicked}
-                          // number={"number" + i}
-                          image={el}
-                       >
-                          {"Humay"}
-                       </ImageSlot>
-                 )
-              })}    
-           </div>
-        )
+         if(this.state.showImagePage){
+            return(
+               <div className="slots">
+                  {this.state.imageSlots.map((el,i)=>{
+                     return (
+                           <ImageSlot
+                              key={i}
+                              // onClick={() => {this.handleOnClick(i)}}
+                              // clicked={this.state.clicked}
+                              // number={"number" + i}
+                              image={el}
+                              timer={i * 1000}
+                           >
+                              {"Humay"}
+                           </ImageSlot>
+                     )
+                  })}    
+               </div>
+            )
+         }
       }
  
 
     render(){
        return(
-            <div>
+            <div id="imagePage">
                 {this.renderImages()}
             </div>
        );
