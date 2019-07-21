@@ -33,7 +33,7 @@ class ImageSlot extends Component {
     render(){
         return(
             <div className="slot">
-                {this.props.children}
+                <img src={this.props.image}/>
             </div>
         );
     }
