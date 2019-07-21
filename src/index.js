@@ -15,7 +15,7 @@ import {
 } from 'connected-react-router';
 import App from './components/app';
 import Parallax from './components/Parallax/Parallax';
-import Text from './components/Parallax/Text/text';
+
 
 
 const store = configureStore()

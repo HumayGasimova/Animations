@@ -15,12 +15,12 @@ import React,{
   * Styles
   */
  
-
+import './headerText.scss';
  
  /**
   * App component definition and export
   */
- export class Text extends Component {
+ export class headerText extends Component {
  
     /**
       * Constructor
@@ -44,15 +44,18 @@ import React,{
    }
  
     render(){
-       return(<div  style={{transform: `translate(0px, ${this.state.slower}px)`}}>
+       return(
+            <div className="headerText">
+               <div  style={{transform: `translate(0px, ${this.state.slower}px)`}}>
                   <svg height="100%" width="100%"
                      >
                      <text x="50%" y="50%" fill="rgb(136, 0, 101)" textAnchor="middle">Crypto347!</text>
                   </svg>
                </div>
+            </div>
        );
     }
  }
  
- export default Text;
+ export default headerText;
  

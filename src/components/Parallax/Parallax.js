@@ -2,24 +2,25 @@
  * Libraries
  */
 
-import React,{
-    Component
- } from 'react';
+   import React,{
+      Component
+   } from 'react';
  
  /**
   * Components
   */
-import Stars from './Stars/stars';
-import Unicorn from './Unicorn/unicorn';
-import AirBalloon from './AirBalloon/airBalloon';
+   import HeaderText from './Text/HeaderText/headerText';
+   import Stars from './Stars/stars';
+   import Unicorn from './Unicorn/unicorn';
+   import AirBalloon from './AirBalloon/airBalloon';
  
  /**
   * Styles
   */
  
-import './parallax.scss';
+   import './parallax.scss';
 
-import Text from './Text/text'
+
  
  /**
   * App component definition and export
@@ -39,10 +40,8 @@ import Text from './Text/text'
        return(
             <div className="main">
                <div className="backgroundBox">
-                  <Stars left/> 
-                  <div className="logo">
-                     <Text/>
-                  </div>
+                  <Stars left/>
+                  <HeaderText/>
                   <Stars/> 
                   <AirBalloon left/>
                   <AirBalloon />
