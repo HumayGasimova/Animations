@@ -29,14 +29,16 @@ class ImageSlot extends Component {
         }
     }
     
-    componentWillMount = () => {
+    componentDidUpdate = () => {
         setTimeout(()=>{
             this.setState({
                 hidden: false
             })
         },this.props.timer)
     }
-
+    componentWillUnmount = () => {
+        clearTimeout()
+    }
 
     /**
     * Markup
@@ -44,9 +46,8 @@ class ImageSlot extends Component {
 
     render(){
         return(
-            <div 
-                // className="slot"
-                className={this.state.hidden ? "hidden" : "slot"}
+            <div id="slot"
+                className={this.state.hidden ? "hidden" : `${this.props.slotNumber}`}
             >
                 <img src={this.props.image}/>
             </div>
