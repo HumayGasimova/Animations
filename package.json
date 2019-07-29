@@ -3,10 +3,13 @@
   "version": "1.0.0",
   "description": "",
   "private": true,
+  "homepage": "https://Crypto347.github.io/Animations",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack",
-    "start": "webpack-dev-server"
+    "start": "webpack-dev-server",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "keywords": [],
   "author": "",
@@ -34,6 +37,7 @@
   },
   "dependencies": {
     "connected-react-router": "^6.3.2",
+    "gh-pages": "^2.0.1",
     "react": "^16.8.5",
     "react-dom": "^16.8.5",
     "react-spring": "^8.0.20"

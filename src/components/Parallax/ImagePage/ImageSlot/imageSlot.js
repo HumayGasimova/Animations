@@ -36,9 +36,6 @@ class ImageSlot extends Component {
             })
         },this.props.timer)
     }
-    componentWillUnmount = () => {
-        clearTimeout()
-    }
 
     /**
     * Markup
