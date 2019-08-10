@@ -29,7 +29,6 @@ import React,{
     render(){
        return(
          <div className="backDrop"/>
-          
        );
     }
  }
