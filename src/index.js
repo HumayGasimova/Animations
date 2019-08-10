@@ -15,6 +15,7 @@ import {
 } from 'connected-react-router';
 import App from './components/app';
 import Parallax from './components/Parallax/Parallax';
+import AnimasionCss from './components/AnimationCss/animationCss';
 
 
 
@@ -38,6 +39,6 @@ ReactDOM.render(
     //             </App>    
     //    </ConnectedRouter>
     // </Provider>
-    <Parallax/>,
+    <AnimasionCss/>,
    document.getElementById('app')
 );
