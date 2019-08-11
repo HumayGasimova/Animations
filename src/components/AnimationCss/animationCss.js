@@ -5,7 +5,7 @@
 import React,{
     Component
  } from 'react';
- import Transition from 'react-transition-group/Transition';
+
  
  /**
   * Components
@@ -63,20 +63,10 @@ import React,{
                 <h1> React Animation  </h1> 
                 <button onClick={this.handleDialogBoxOpen}>Open Dialog Box</button>
                 {this.renderBackDrop()}
-                <Transition 
-                    in={this.state.dialogBoxIsOpen} 
-                    timeout={300}
-                    mountOnEnter
-                    unmountOnExit
-                >
-                    {state => (
-                         <DialogBox 
-                         handleDialogBoxClose={this.handleDialogBoxClose}
-                         dialogBoxIsOpen={this.state.dialogBoxIsOpen}
-                     />
-                    )}
-               
-                </Transition>
+                <DialogBox 
+                    handleDialogBoxClose={this.handleDialogBoxClose}
+                    dialogBoxIsOpen={this.state.dialogBoxIsOpen}
+                />
             </div>
          </div>
        );
