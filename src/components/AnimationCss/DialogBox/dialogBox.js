@@ -20,6 +20,11 @@ import './dialogBox.scss';
 /**
  * AnimationCss component definition and export
  */
+
+const animationTiming = {
+   enter: 400,
+   exit: 1000
+}
 export class DialogBox extends Component {
 
    /**
@@ -31,7 +36,7 @@ export class DialogBox extends Component {
       return(
       <Transition 
          in={this.props.dialogBoxIsOpen} 
-         timeout={300}
+         timeout={animationTiming}
          mountOnEnter
          unmountOnExit
       > 
