@@ -15,14 +15,14 @@
         // z-index: 200;
         // opacity: 1;
         // transform: translateY(0);
-        // animation: openModal 0.4s ease-out forwards;
+        animation: openModal 0.4s ease-out forwards;
     }
     
     &.close {
         // z-index: -1;
         // opacity: 0;
         // transform: translateY(-100%);
-        // animation: closeModal 1s ease-out forwards;
+        animation: closeModal 1s ease-out forwards;
     }
 }
 

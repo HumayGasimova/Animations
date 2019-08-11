@@ -63,7 +63,13 @@ export class DialogBox extends Component {
       timeout={animationTiming}
       mountOnEnter
       unmountOnExit
-      classNames="fade-slide"
+      // classNames="fade-slide"
+      classNames={{
+         enter: '',
+         enterActive: 'open',
+         exit: '',
+         exitActive: 'close'
+      }}
    > 
          <div 
             // className={this.props.dialogBoxIsOpen ? "dialogBox open" : "dialogBox close"}
