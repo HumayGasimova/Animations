@@ -28,11 +28,11 @@ import React,{
 
     render(){
        return(
-         <div className={this.props. dialogBoxIsOpen ? "dialogBox open" : "dialogBox close"}>
+         <div className={this.props.dialogBoxIsOpen ? "dialogBox open" : "dialogBox close"}>
           
                <h1>Dialog Box</h1>
                <button onClick={this.props.handleDialogBoxClose}>Close Dialog Box</button>
-          
+        
          </div>
        );
     }

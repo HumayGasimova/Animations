@@ -28,7 +28,9 @@ import React,{
 
     render(){
        return(
-         <div className="backDrop"/>
+         <div 
+            onClick={this.props.handleDialogBoxClose}
+            className="backDrop"/>
        );
     }
  }
